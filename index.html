@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HTML страница для экспериментоа</title>
+    <!-- Подключаем файл со скриптами на JavaScript -->
+    <script language="JavaScript" src="main.js">
+    </script>
+</head>
+<body onload="solveLinEq()">
+
+Программа для решения линейного уравнения:
+
+a*x + b = 0
+
+<br>
+
+<!-- Форма для ввода данных -->
+<form>
+    <label for="a">
+        Введите a:
+        <input id="a" name="a" value="1" onchange="solveLinEq()" oninput="solveLinEq()"/>
+    </label><br>
+    <label for="b">
+        Введите b:
+        <input id="b" name="b" value="2" onchange="solveLinEq()" oninput="solveLinEq()"/>
+    </label><br>
+</form>
+
+<!-- Для вывода результата -->
+<div id="result">
+</div>
+
+</body>
+</html>

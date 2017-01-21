@@ -1,0 +1,19 @@
+{
+  "name": "javascript-example",
+  "version": "0.0.1",
+  "description": "JavaScript Examples",
+  "main": "main.js",
+  "scripts": {
+    "test": "node -e \"console.log('JavaScript syntax check passed')\" && node --check main.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/levelp/JavaScriptExamples.git"
+  },
+  "author": "Denis Stepulenok",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/levelp/JavaScriptExamples/issues"
+  },
+  "homepage": "https://github.com/levelp/JavaScriptExamples#readme"
+}

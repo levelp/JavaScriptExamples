@@ -4,16 +4,23 @@
   "description": "JavaScript Examples",
   "main": "main.js",
   "scripts": {
-    "test": "test.js"
+    "compile": "babel --experimental --optional runtime -d lib/ src/",
+    "prepublish": "npm run compile",
+    "test": "./node_modules/jshint/bin/jshint main.js",
+    "test-travis": "node --harmony istanbul cover _mocha --report lcovonly --hook-run-in-context -- --require test/babelhook --compilers es6.js:babel/register --reporter dot"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/levelp/JavaScriptExamples.git"
   },
-  "author": "",
+  "author": "Denis Stepulenok",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/levelp/JavaScriptExamples/issues"
   },
-  "homepage": "https://github.com/levelp/JavaScriptExamples#readme"
+  "homepage": "https://github.com/levelp/JavaScriptExamples#readme",
+  "devDependencies": {
+    "babel": "^6.5.2",
+    "jshint": "^2.6.0"
+  }
 }
